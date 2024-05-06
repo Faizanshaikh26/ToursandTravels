@@ -1,109 +1,60 @@
 import React from 'react'
 import '../Styles/Expertice.css'
+import { ExperticeData } from '../HardcoreData/Expertice'
 
 function Expertice() {
+  
   return (
     <>
     <div className="Expertice-cointainer">
         <h3>Our Expertice</h3>
-<div className="Card-cointainer">
-<article className="card">
-  <img
-    className="card__background"
-    src="https://i.imgur.com/QYWAcXk.jpeg"
-    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
-    width="1920"
-    height="2193"
-  />
-  <div className="card__content | flow">
-    <div className="card__content--container | flow">
-      <h2 className="card__title">Colombia</h2>
-      <p className="card__description">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in
-        labore laudantium deserunt fugiat numquam.
-      </p>
+
+ <div className="product">
+{
+  ExperticeData.map((data)=>{
+    return (
+      <>
+       <div id="container">
+      <div className="product-details">
+        <h1>{data.place_name}</h1>
+        <span className="hint-star star">
+          <i className="fa fa-star" aria-hidden="true"></i>
+          <i className="fa fa-star" aria-hidden="true"></i>
+          <i className="fa fa-star" aria-hidden="true"></i>
+          <i className="fa fa-star" aria-hidden="true"></i>
+          <i className="fa fa-star-o" aria-hidden="true"></i>
+        </span>
+        <p className="information">"{data.information}".</p>
+        <div className="control">
+          <button className="btn">
+            <span className="price">{data.price}</span>
+            <span className="shopping-cart">
+            <i className="fa-solid fa-bookmark"></i>
+             </span>
+            <span className="buy">Book now</span>
+          </button>
+        </div>
+      </div>
+      <div className="product-image">
+        <img src={data.image} alt="" />
+        <div className="info">
+          <h2> Description</h2>
+          <ul>
+            <li><strong>Height : </strong>5 Ft </li>
+            <li><strong>Shade : </strong>Olive green</li>
+            <li><strong>Decoration: </strong>balls and bells</li>
+            <li><strong>Material: </strong>Eco-Friendly</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <button className="card__button">Read more</button>
-  </div>
-</article>
-<article className="card">
-  <img
-    className="card__background"
-    src="https://i.imgur.com/QYWAcXk.jpeg"
-    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
-    width="1920"
-    height="2193"
-  />
-  <div className="card__content | flow">
-    <div className="card__content--container | flow">
-      <h2 className="card__title">Colombia</h2>
-      <p className="card__description">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in
-        labore laudantium deserunt fugiat numquam.
-      </p>
+      </>
+    )
+  })
+}
+
     </div>
-    <button className="card__button">Read more</button>
-  </div>
-</article>
-<article className="card">
-  <img
-    className="card__background"
-    src="https://i.imgur.com/QYWAcXk.jpeg"
-    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
-    width="1920"
-    height="2193"
-  />
-  <div className="card__content | flow">
-    <div className="card__content--container | flow">
-      <h2 className="card__title">Colombia</h2>
-      <p className="card__description">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in
-        labore laudantium deserunt fugiat numquam.
-      </p>
-    </div>
-    <button className="card__button">Read more</button>
-  </div>
-</article>
-<article className="card">
-  <img
-    className="card__background"
-    src="https://i.imgur.com/QYWAcXk.jpeg"
-    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
-    width="1920"
-    height="2193"
-  />
-  <div className="card__content | flow">
-    <div className="card__content--container | flow">
-      <h2 className="card__title">Colombia</h2>
-      <p className="card__description">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in
-        labore laudantium deserunt fugiat numquam.
-      </p>
-    </div>
-    <button className="card__button">Read more</button>
-  </div>
-</article>
-<article className="card">
-  <img
-    className="card__background"
-    src="https://i.imgur.com/QYWAcXk.jpeg"
-    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
-    width="1920"
-    height="2193"
-  />
-  <div className="card__content | flow">
-    <div className="card__content--container | flow">
-      <h2 className="card__title">Colombia</h2>
-      <p className="card__description">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in
-        labore laudantium deserunt fugiat numquam.
-      </p>
-    </div>
-    <button className="card__button">Read more</button>
-  </div>
-</article>
-</div>
-    </div>
+ </div>
     
     
     </>
