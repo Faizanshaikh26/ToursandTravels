@@ -1,0 +1,49 @@
+.about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+video-cointainer{
+    flex: 1 1 42rem;
+
+}
+ video {
+    border-radius: 1rem;
+    width: 100%;
+
+}
+.controls{
+    text-align: center;
+    padding: 2rem 0;
+}
+.controls span{
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: wheat;
+    cursor: pointer;
+}
+.content{
+    flex: 1 1 42rem;
+margin-bottom: 5rem;
+}
+
+.content span {
+    color: blue;
+    font-size: 2rem;
+}
+.content h3 {
+    color: white;
+    font-size: 5rem;
+    margin-top: .5rem;
+}
+.content p {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: lightcoral;
+  line-height: 2;
+}

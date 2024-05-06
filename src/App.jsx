@@ -1,26 +1,14 @@
-import Navbar from "./Components/Navbar"
 import './App.css'
-import Hero from "./Components/Hero"
+import Home from "./Components/Home"
 
-
-
-function App() {
-  
-
- 
-
+function App() {  
   return (
     <>
-    
-     <Navbar/>
-     <Hero/>
-     
-    
-     
   
+    <Home/>
      
+
     </>
   )
 }
-
 export default App
