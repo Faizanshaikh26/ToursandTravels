@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar"
 import Hero from './Hero'
 import Expertice from './Expertice'
 import Service from './Service'
+import Choose from './Choose'
 // import About from './About'
 
 
@@ -14,6 +15,7 @@ function Home() {
    <Expertice/>
    {/* <About/> */}
    <Service/>
+   <Choose/>
    </>
   )
 }

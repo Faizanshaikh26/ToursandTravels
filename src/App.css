@@ -10,6 +10,20 @@
 
 
 
+  :root {
+    --primary-color: #669ccb;
+    --primary-color-dark: #5681a7;
+    --secondary-color: #e8f1fa;
+    --text-dark: #282d31;
+    --text-light: #767268;
+    --extra-light: #f3f4f6;
+    --max-width: 1200px;
+  }
+
+  
+body{
+  background: var(--secondary-color);
+}
 
 html {
   scroll-behavior: smooth;
