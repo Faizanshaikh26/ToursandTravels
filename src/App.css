@@ -8,8 +8,6 @@
  
 }
 
-
-
   :root {
     --primary-color: #669ccb;
     --primary-color-dark: #5681a7;
@@ -29,3 +27,21 @@ html {
   scroll-behavior: smooth;
 }
 
+/* <div className="founder">
+    
+<div className="card card0">
+  <div className="border">
+    <h2>Al Pacino</h2>
+    <div className="icons">
+    <i className="fa-brands fa-instagram favicon" aria-hidden="true"></i>
+    <i className="fa-brands fa-youtube favicon" aria-hidden="true"></i>
+    <i className="fa-brands fa-facebook favicon" aria-hidden="true"></i>
+    <i className="fa-brands fa-twitter favicon" aria-hidden="true"></i>
+    <i className="fa-brands fa-linkdein favicon" aria-hidden="true"></i>
+
+    </div>
+  </div>
+</div>
+
+
+   </div> */
