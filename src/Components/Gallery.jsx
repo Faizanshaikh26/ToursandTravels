@@ -1,132 +1,108 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import '../Styles/Gallery.css';
-import { galleryData } from '../HardcoreData/Gallery';
 
-const GalleryCarousel = () => {
-  const nextRef = useRef(null);
-  const prevRef = useRef(null);
-  const carouselRef = useRef(null);
-  const sliderRef = useRef(null);
-  const thumbnailRef = useRef(null);
-  const timeRef = useRef(null);
-
-  const [timeRunning, setTimeRunning] = useState(3000);
-  const [timeAutoNext, setTimeAutoNext] = useState(7000);
-
-  useEffect(() => {
-    const nextDom = nextRef.current;
-    const prevDom = prevRef.current;
-    const carouselDom = carouselRef.current;
-    const sliderDom = sliderRef.current;
-    const thumbnailBorderDom = thumbnailRef.current;
-    const timeDom = timeRef.current;
-
-    thumbnailBorderDom.appendChild(thumbnailBorderDom.querySelectorAll('.item')[0]);
-
-    let runTimeOut;
-    let runNextAuto = setTimeout(() => {
-      nextDom.click();
-    }, timeAutoNext);
-
-    const showSlider = (type) => {
-      const sliderItemsDom = sliderDom.querySelectorAll('.item');
-      const thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
-
-      if (type === 'next') {
-        sliderDom.appendChild(sliderItemsDom[0]);
-        thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
-        carouselDom.classList.add('next');
-      } else {
-        sliderDom.prepend(sliderItemsDom[sliderItemsDom.length - 1]);
-        thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
-        carouselDom.classList.add('prev');
-      }
-      clearTimeout(runTimeOut);
-      runTimeOut = setTimeout(() => {
-        carouselDom.classList.remove('next');
-        carouselDom.classList.remove('prev');
-      }, timeRunning);
-
-      clearTimeout(runNextAuto);
-      runNextAuto = setTimeout(() => {
-        nextDom.click();
-      }, timeAutoNext);
-    };
-
-    nextDom.onclick = () => {
-      showSlider('next');
-    };
-
-    prevDom.onclick = () => {
-      showSlider('prev');
-    };
-
-    return () => {
-      clearTimeout(runTimeOut);
-      clearTimeout(runNextAuto);
-    };
-  }, [timeAutoNext, timeRunning]);
-
+const Gallery = () => {
   return (
-    <div className="carousel" ref={carouselRef}>
-      <div className="list" ref={sliderRef}>
-      {
-        galleryData.map((data)=>{
-          return (
-            <>
-            <div class="item">
-                <img src={data.image}/> 
-                <div class="content">
-                    <div class="author">{data.author}</div>
-                    <div class="title">{data.title}</div>
-                    <div class="topic">{data.topic}</div>
-                    <div class="des">
-                
-                       {data.description}
-                    </div>
-                    <div class="buttons">
-                        <button>SEE MORE</button>
-                        {/* <button>SUBSCRIBE</button> */}
-                    </div>
-                </div>
-            </div>
-            
-            </>
-          )
-        })
-      }
-    
-      </div>
-      <div className="thumbnail" ref={thumbnailRef}>
-      {
-        galleryData.map((data)=>{
-          return (<>
-          
-          <div class="item">
-                <img src={data.image}/>
-                <div class="content">
-                    <div class="title">
-                        {data.name}
-                    </div>
-                    {/* <div class="description">
-                        {data.description}
-                    </div> */}
-                </div>
-            </div>
-          </>)
-        })
-      }
-    
-      
+ <>
+ <div className="gallery-cointainer">
+    <h3 className="title">Our Gallery</h3>
+    <p className="subtitle">Memorable moments captured by our talented photographers</p>
+ <div class="gallery">
+	<div class="gallery__column">
+		<a href="https://unsplash.com/@jeka_fe" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="https://source.unsplash.com/_cvwXhGqG-o/300x300" alt="Portrait by Jessica Felicio" class="gallery__image"/>
+				<figcaption class="gallery__caption">Portrait by Jessica Felicio</figcaption>
+			</figure>
+		</a>
 
-      </div>
-      <div className="arrows">
-        <button id="prev" ref={prevRef}>{'<'}</button>
-        <button id="next" ref={nextRef}>{'>'}</button>
-      </div>
-      <div className="time" ref={timeRef}></div>
-    </div>
+		<a href="https://unsplash.com/@oladimeg" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="https://source.unsplash.com/AHBvAIVqk64/300x500" alt="Portrait by Oladimeji Odunsi" class="gallery__image"/>
+				<figcaption class="gallery__caption">Portrait by Oladimeji Odunsi</figcaption>
+			</figure>
+		</a>
+
+		<a href="https://unsplash.com/@a2eorigins" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="https://source.unsplash.com/VLPLo-GtrIE/300x300" alt="Portrait by Alex Perez" class="gallery__image"/>
+				<figcaption class="gallery__caption">Portrait by Alex Perez</figcaption>
+			</figure>
+		</a>
+	</div>
+	
+	<div class="gallery__column">
+		<a href="https://unsplash.com/@hikiapp" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="https://source.unsplash.com/A9rQeI2AdR4/300x300" alt="Portrait by Hikiapp" class="gallery__image"/>
+				<figcaption class="gallery__caption">Portrait by Hikiapp</figcaption>
+			</figure>
+		</a>
+		
+		<a href="https://unsplash.com/@von_co" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="https://source.unsplash.com/dnL6ZIpht2s/300x300" alt="Portrait by Ivana Cajina" class="gallery__image"/>
+				<figcaption class="gallery__caption">Portrait by Ivana Cajina</figcaption>
+			</figure>
+		</a>
+
+		<a href="https://unsplash.com/@j_erhunse" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="https://source.unsplash.com/vp9mRauo68c/300x500" alt="Portrait by Jeffery Erhunse" class="gallery__image"/>
+				<figcaption class="gallery__caption">Portrait by Jeffery Erhunse</figcaption>
+			</figure>
+		</a>
+	</div>
+	
+	<div class="gallery__column">
+		<a href="https://unsplash.com/@marilezhava" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="https://source.unsplash.com/Xm9-vA_bhm0/300x500" alt="Portrait by Mari Lezhava" class="gallery__image"/>
+				<figcaption class="gallery__caption">Portrait by Mari Lezhava</figcaption>
+			</figure>
+		</a>
+		
+		<a href="https://unsplash.com/@ethanhaddox" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="https://source.unsplash.com/NTjSR3zYpsY/300x300" alt="Portrait by Ethan Haddox" class="gallery__image"/>
+				<figcaption class="gallery__caption">Portrait by Ethan Haddox</figcaption>
+			</figure>
+		</a>
+
+		<a href="https://unsplash.com/@mr_geshani" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="https://source.unsplash.com/2JH8d3ChNec/300x300" alt="Portrait by Amir Geshani" class="gallery__image"/>
+				<figcaption class="gallery__caption">Portrait by Amir Geshani</figcaption>
+			</figure>
+		</a>
+	</div>
+	
+	<div class="gallery__column">
+		<a href="https://unsplash.com/@nixcreative" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="https://source.unsplash.com/sh3LSNbyj7k/300x300" alt="Portrait by Tyler Nix" class="gallery__image"/>
+				<figcaption class="gallery__caption">Portrait by Tyler Nix</figcaption>
+			</figure>
+		</a>
+
+		<a href="https://unsplash.com/@majestical_jasmin" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="https://source.unsplash.com/OQd9zONSx7s/300x300" alt="Portrait by Jasmin Chew" class="gallery__image"/>
+				<figcaption class="gallery__caption">Portrait by Jasmin Chew</figcaption>
+			</figure>
+		</a>
+		
+		<a href="https://unsplash.com/@dimadallacqua" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="https://source.unsplash.com/XZkEhowjx8k/300x500" alt="Portrait by Dima DallAcqua" class="gallery__image"/>
+				<figcaption class="gallery__caption">Portrait by Dima DallAcqua</figcaption>
+			</figure>
+		</a>
+	</div>
+</div>
+ </div>
+ </>
   );
 };
 
-export default GalleryCarousel;
+export default Gallery;

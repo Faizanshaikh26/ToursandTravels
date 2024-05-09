@@ -40,42 +40,35 @@ export const galleryData = [
     "title": "Cultural Exploration in Japan",
     "topic": "Culture"
     },
-    {
-      image: 'https://i.ibb.co/RNkk6L0/img1.jpg',
-      name: 'Ireland',
-      description: 'Ireland is an island in the North Atlantic. It is separated from Great Britain to its east by the North Channel, the Irish Sea, and St George\'s Channel.',
-      "author": "William Jones",
-      "title": "Diving in the Great Barrier Reef",
-      "topic": "Adventure",
-    },
-    {
-      image: 'https://i.ibb.co/wK3Rjkv/img1.jpg',
-      name: 'Norway',
-      description: 'Norway is a Scandinavian country encompassing mountains, glaciers and deep coastal fjords.',
-      "author": "Olivia Taylor",
-    "title": "Camping in the Grand Canyon",
-    "topic": "Adventure"
-    },
-    {
-      image: 'https://i.ibb.co/Sxgk5Qb/img1.jpg',
-      name: 'New Zealand',
-      description: 'New Zealand is a country in the southwestern Pacific Ocean consisting of two main islands, both marked by volcanoes, glaciation and having a varied landscape.'
-    },
-    {
-      image: 'https://i.ibb.co/1v9N1ZG/img1.jpg',
-      name: 'Canada',
-      description: 'Canada is a country in the northern part of North America. Its ten provinces and three territories extend from the Atlantic to the Pacific and northward into the Arctic Ocean.',
-      "author": "Daniel Martinez",
-    "title": "Photography in Patagonia",
-    "topic": "Nature"
-    },
-    {
-      image: 'https://i.ibb.co/3WJjRzG/img11.jpg',
-      name: 'Japan',
-      description: 'Japan is an island country in East Asia, located in the northwest Pacific Ocean. It is bordered on the west by the Sea of Japan, and extends from the Sea of Okhotsk in the north toward the East China Sea and Taiwan in the south.',
-      "author": "Ava Anderson",
-    "title": "Exploring Ancient Ruins in Greece",
-    "topic": "History"
-    }
+   
+    // {
+    //   image: 'https://i.ibb.co/wK3Rjkv/img1.jpg',
+    //   name: 'Norway',
+    //   description: 'Norway is a Scandinavian country encompassing mountains, glaciers and deep coastal fjords.',
+    //   "author": "Olivia Taylor",
+    // "title": "Camping in the Grand Canyon",
+    // "topic": "Adventure"
+    // },
+    // {
+    //   image: 'https://i.ibb.co/Sxgk5Qb/img1.jpg',
+    //   name: 'New Zealand',
+    //   description: 'New Zealand is a country in the southwestern Pacific Ocean consisting of two main islands, both marked by volcanoes, glaciation and having a varied landscape.'
+    // },
+    // {
+    //   image: 'https://i.ibb.co/1v9N1ZG/img1.jpg',
+    //   name: 'Canada',
+    //   description: 'Canada is a country in the northern part of North America. Its ten provinces and three territories extend from the Atlantic to the Pacific and northward into the Arctic Ocean.',
+    //   "author": "Daniel Martinez",
+    // "title": "Photography in Patagonia",
+    // "topic": "Nature"
+    // },
+    // {
+    //   image: 'https://i.ibb.co/3WJjRzG/img11.jpg',
+    //   name: 'Japan',
+    //   description: 'Japan is an island country in East Asia, located in the northwest Pacific Ocean. It is bordered on the west by the Sea of Japan, and extends from the Sea of Okhotsk in the north toward the East China Sea and Taiwan in the south.',
+    //   "author": "Ava Anderson",
+    // "title": "Exploring Ancient Ruins in Greece",
+    // "topic": "History"
+    // }
   ];
   
