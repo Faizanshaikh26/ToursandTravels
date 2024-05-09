@@ -5,6 +5,9 @@ import Expertice from './Components/Expertice'
 import Service from './Components/Service'
 import Choose from './Components/Choose'
 import About from './Components/About'
+import Experience from './Components/Experience'
+import Gallery from './Components/Gallery'
+
 
 
 function Home() {
@@ -16,6 +19,9 @@ function Home() {
    <Service/>
    <Choose/>
    <About/>
+   <Experience/>
+   <Gallery/>
+   
    </>
   )
 }

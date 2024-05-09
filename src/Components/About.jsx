@@ -35,7 +35,7 @@ function About() {
       <div className="founder">
       <div className="title">
       <h3>Our Founder</h3>
-      <div className="container">
+      <div className="founder-container">
         <div className="card card0">
           <div className="border">
             <h2>Al Pacino</h2>
