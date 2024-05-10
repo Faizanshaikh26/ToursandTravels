@@ -12,6 +12,9 @@ import Gallery from './Components/Gallery'
 
 
 
+
+
+
 function Home() {
   return (
    <>
@@ -24,6 +27,8 @@ function Home() {
    <About/>
    <Experience/>
    <Gallery/>
+  
+   
    
    </>
   )
