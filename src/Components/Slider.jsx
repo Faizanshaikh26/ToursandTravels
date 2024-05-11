@@ -74,17 +74,17 @@ const Slider = () => {
         galleryData.map((data)=>{
           return (
             <>
-            <div class="item">
+            <div className="item">
                 <img src={data.image}/> 
-                <div class="content">
-                    <div class="author">{data.author}</div>
-                    <div class="title">{data.title}</div>
-                    <div class="topic">{data.topic}</div>
-                    <div class="des">
+                <div className="content">
+                    <div className="author">{data.author}</div>
+                    <div className="title">{data.title}</div>
+                    <div className="topic">{data.topic}</div>
+                    <div className="des">
                 
                        {data.description}
                     </div>
-                    <div class="buttons">
+                    <div className="buttons">
                         <button>SEE MORE</button>
                         {/* <button>SUBSCRIBE</button> */}
                     </div>
@@ -102,13 +102,13 @@ const Slider = () => {
         galleryData.map((data)=>{
           return (<>
           
-          <div class="item">
+          <div className="item">
                 <img src={data.image}/>
-                <div class="content">
-                    <div class="title">
+                <div className="content">
+                    <div className="title">
                         {data.name}
                     </div>
-                    {/* <div class="description">
+                    {/* <div className="description">
                         {data.description}
                     </div> */}
                 </div>

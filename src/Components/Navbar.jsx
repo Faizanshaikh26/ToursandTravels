@@ -23,10 +23,10 @@ function Navbar() {
             <a  href="/">Home</a>
           </li>
           <li>
-            <a href="/shop">Shop</a>
+            <a href="/shop">Services</a>
           </li>
           <li>
-            <a href="/blog">Blog</a>
+            <a href="/blog">Gallery</a>
           </li>
           <li>
             <a href="/about">About</a>

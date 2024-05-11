@@ -9,6 +9,7 @@ import Experience from './Components/Experience'
 import Slider from './Components/Slider'
 import Gallery from './Components/Gallery'
 import Testonomials from './Components/Testonomials'
+import Footer from './Components/Footer'
 
 
 
@@ -29,6 +30,7 @@ function Home() {
    <Experience/>
    <Gallery/>
    <Testonomials/>
+   <Footer/>
   
    
    
