@@ -7,7 +7,7 @@ function Service() {
   return (
 <>
 
-        <div className="service-cointainer" >
+        <div className="service-cointainer" id='services'>
             <h3 className='title'>Our Services</h3>
            <div className="box-cointainer" data-aos="fade-up-right">
          {

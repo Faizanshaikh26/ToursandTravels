@@ -12,7 +12,7 @@ function Expertice() {
   
   return (
     <>
-    <div className="Expertice-cointainer">
+    <div className="Expertice-cointainer" id='expertice'>
         <h3>Our Expertice</h3>
 
  <div className="product" data-aos="zoom-in">

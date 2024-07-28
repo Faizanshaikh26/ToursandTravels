@@ -4,7 +4,7 @@ function Experience() {
 
   return (
     <>
-     <section className="display__container" data-aos="fade-up-right">
+     <section className="display__container" data-aos="fade-up-right" id='expereince'>
       <div className="section__container">
         <h2 className="section__title">Our Expereince</h2>
         <p className="section__subtitle">

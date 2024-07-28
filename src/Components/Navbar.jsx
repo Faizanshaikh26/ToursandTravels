@@ -1,5 +1,6 @@
-import React, { useState } from "react"
-import '../Styles/Navbar.css'
+import React, { useState } from "react";
+import "../Styles/Navbar.css";
+import { Link } from "react-scroll";
 function Navbar() {
   const [Openmenu, setOpenmenu] = useState(false);
   const Menuopen = () => {
@@ -7,57 +8,78 @@ function Navbar() {
   };
   return (
     <>
-    
-    <div className="Header">
-      <a href="/">
-        <img src="" alt="Logo" />
-      </a>
-      <div>
-        <ul id="Navbar" className={Openmenu ? "Active-Menu" : ""}>
+      <div className="Header">
+        <Link to="">
+          <img src="" alt="Logo" />
+        </Link>
+        <div>
+          <ul id="Navbar" className={Openmenu ? "Active-Menu" : ""}>
+            <i
+              id="X-Bar"
+              onClick={Menuopen}
+              className="fa-sharp  fa-solid fa-xmark"
+            ></i>
+            <li>
+              <Link to="Home"  spy={true} 
+      smooth={true} 
+      offset={-100} 
+      duration={500} >Home</Link>
+            </li>
+            <li>
+              <Link to="expertice"  spy={true} 
+      smooth={true} 
+      offset={-100} 
+      duration={500} >Expertice</Link>
+            </li>
+            <li>
+              <Link to="services"  spy={true} 
+      smooth={true} 
+      offset={-100} 
+      duration={500} >Services</Link>
+            </li>
+            <li>
+              <Link to="choose"  spy={true} 
+      smooth={true} 
+      offset={-100} 
+      duration={500} >Choose Us</Link>
+            </li>
+            <li>
+              <Link to="about"  spy={true} 
+      smooth={true} 
+      offset={50} 
+      duration={500} >About Us</Link>
+            </li>
+            <li>
+              <Link to="expereince"  spy={true} 
+      smooth={true} 
+      offset={-150} 
+      duration={500} >Expereince</Link>
+            </li>
+            <li>
+              <Link to="gallery"  spy={true} 
+      smooth={true} 
+      offset={-150} 
+      duration={500} >Gallery</Link>
+            </li>
+            <li>
+              <Link to="testnomial"  spy={true} 
+      smooth={true} 
+      offset={-100} 
+      duration={500} >Testnomial</Link>
+            </li>
+          </ul>
+        </div>
+
+        <div id="Mobile">
           <i
-            id="X-Bar"
+            id="Bar"
+            className="fa-sharp  fa-solid fa-bars"
             onClick={Menuopen}
-            className="fa-sharp  fa-solid fa-xmark"
           ></i>
-          <li>
-            <a  href="/">Home</a>
-          </li>
-          <li>
-            <a href="/shop">Services</a>
-          </li>
-          <li>
-            <a href="/blog">Gallery</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-        
-          
-         
-        </ul>
+        </div>
       </div>
-
-      <div id="Mobile">
-        
-        <i
-          id="Bar"
-          className="fa-sharp  fa-solid fa-bars"
-          onClick={Menuopen}
-        ></i>
-      </div>
-    </div>
-
-  
-   
-    
     </>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

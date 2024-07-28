@@ -19,7 +19,7 @@ import Footer from './Components/Footer'
 
 function Home() {
   return (
-   <>
+   <div id='Home'>
    <Navbar/>
 <Slider/>
    {/* <Hero/> */}
@@ -34,7 +34,7 @@ function Home() {
   
    
    
-   </>
+   </div>
   )
 }
 

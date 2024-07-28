@@ -10,11 +10,9 @@ const Gallery = () => {
   PhotosData.forEach((photo, index) => {
     photoColumns[index % columns].push(photo);
   });
-  useEffect(()=>{
-    Aos.init({duration:1000})
-  },[])
+ 
   return (
-    <div className="gallery-cointainer" data-aos="fade-up"
+    <div className="gallery-cointainer" id='gallery' data-aos="fade-up"
     data-aos-duration="3000">
       <h3 className="title">Our Gallery</h3>
       <p className="subtitle">Memorable moments captured by our talented photographers</p>

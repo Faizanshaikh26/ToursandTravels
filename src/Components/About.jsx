@@ -4,7 +4,7 @@ import "../Styles/About.css";
 function About() {
   return (
     <>
-      <div className="about-cointainer">
+      <div className="about-cointainer" id="about">
         <h3 className="title">About us</h3>
         <div className="about-content" data-aos="fade-right">
           <div className="about-image">
