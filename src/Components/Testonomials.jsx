@@ -5,7 +5,7 @@ function Testonomials() {
   return (
     <>
     
-    <div className="testonomials">
+    <div className="testonomials" data-aos="fade-right">
 <h3 className="title">Testnomial</h3>
 <p className="subtitle">What Think Client About Us..</p>
 <div className="parent-box">

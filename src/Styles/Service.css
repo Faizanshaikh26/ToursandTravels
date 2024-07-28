@@ -1,5 +1,6 @@
 .service-cointainer {
-    padding: 40px 80px;
+    padding: 40px 120px;
+    /* background: #000; */
 /* background-color: var(--secondary-color);    */
 
 }
@@ -29,6 +30,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+
+    margin-left: 0px;
 }
 
 .box {

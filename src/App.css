@@ -7,6 +7,9 @@
   font-family: "Spartan", sans-serif;
  
 }
+html {
+  scroll-behavior: smooth;
+}
 
   :root {
     --primary-color: #669ccb;

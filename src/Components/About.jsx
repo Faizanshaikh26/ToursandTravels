@@ -2,18 +2,19 @@ import React from "react";
 import "../Styles/About.css";
 
 function About() {
+
   return (
     <>
       <div className="about-cointainer">
         <h3 className="title">About us</h3>
         <div className="about-content">
-          <div className="about-image">
+          <div className="about-image" data-aos="fade-right">
             <img
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YWJvdXQlMjB1c3xlbnwwfHwwfHx8MA%3D%3D"
               alt=""
             />
           </div>
-          <div className="about-des">
+          <div className="about-des" data-aos="fade-left">
             <p>
               Welcome to Travel, where we transform ordinary journeys into
               extraordinary adventures.
@@ -32,7 +33,7 @@ function About() {
         </div>
 
        
-      <div className="founder">
+      <div className="founder" data-aos="slide-up">
       <div className="title">
       <h3>Our Founder</h3>
       <div className="founder-container">

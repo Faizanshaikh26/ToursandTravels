@@ -1,10 +1,10 @@
 import React from 'react'
 import "../Styles/Choose.css"
-
 function Experience() {
+
   return (
     <>
-     <section className="display__container">
+     <section className="display__container" data-aos="fade-up-right">
       <div className="section__container">
         <h2 className="section__title">Our Expereince</h2>
         <p className="section__subtitle">

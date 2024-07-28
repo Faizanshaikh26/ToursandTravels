@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../Styles/Expertice.css'
 import { ExperticeData } from '../HardcoreData/Expertice'
+import Aos from "aos"
+
+
 
 function Expertice() {
+  useEffect(()=>{
+    Aos.init({duration:2000})
+  },[])
   
   return (
     <>
     <div className="Expertice-cointainer">
         <h3>Our Expertice</h3>
 
- <div className="product">
+ <div className="product" data-aos="zoom-in">
 {
   ExperticeData.map((data)=>{
     return (

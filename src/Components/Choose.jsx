@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../Styles/Choose.css'
+import Aos from 'aos'
 
 function Choose() {
+  useEffect(()=>{
+    Aos.init()
+  },[])
+  
   return (
     <>
     
-    <section className="display__container">
+    <section className="display__container" data-aos="slide-up">
       <div className="section__container">
         <h2 className="section__title">Why Choose Us</h2>
         <p className="section__subtitle">

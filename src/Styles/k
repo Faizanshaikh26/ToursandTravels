@@ -1,4 +1,21 @@
+@media (max-width: 488px) {
+  .testonomials {
+    padding: 10px 50px;
+  }
 
+
+  
+  .test-box .content p {
+    font-size: 13px;
+    padding: 4px;
+  }
+  .test-box .content h5 {
+    margin-top: 5px;
+    font-weight: 900;
+    font-size: 14px;
+  }
+  
+}
 
 
 

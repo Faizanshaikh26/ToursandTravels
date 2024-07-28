@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import '../Styles/Slider.css';
 import { galleryData } from '../HardcoreData/Gallery';
 
+
+
 const Slider = () => {
   const nextRef = useRef(null);
   const prevRef = useRef(null);
@@ -67,8 +69,10 @@ const Slider = () => {
     };
   }, [timeAutoNext, timeRunning]);
 
+
+
   return (
-    <div className="carousel" ref={carouselRef}>
+    <div className="carousel" ref={carouselRef} data-aos="fade-down">
       <div className="list" ref={sliderRef}>
       {
         galleryData.map((data)=>{
