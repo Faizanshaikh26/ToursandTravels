@@ -1,12 +1,9 @@
-import React, { useEffect } from 'react'
-import '../Styles/Service.css'
+import React from 'react'
 import { ServicesData } from '../HardcoreData/Services'
-import Aos from 'aos'
+import '../Styles/Service.css'
 
 function Service() {
-  useEffect(()=>{
-    Aos.init({duration:1000})
-  },[])
+  
   return (
 <>
 
