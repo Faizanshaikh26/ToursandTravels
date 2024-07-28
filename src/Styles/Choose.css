@@ -3,7 +3,7 @@
 }
 
 .section__container {
-  padding: 70px 80px;
+  padding: 2rem 1rem;
   max-width: var(--max-width);
   margin: auto;
 }
