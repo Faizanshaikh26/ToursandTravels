@@ -4,10 +4,9 @@ import { Toaster } from "react-hot-toast"
 import { Route, Routes } from "react-router-dom"
 import './App.css'
 import Home from './Home'
+import Booking from './Pages/Booking'
 import Contact from './Pages/Contact'
 import Login from './Pages/Login'
-import { server } from './config'
-import Booking from './Pages/Booking'
 import NotFound from './Pages/NotFound'
 
 
@@ -16,7 +15,6 @@ function App() {
     Aos.init({duration:"1000"})
   },[])
 
-  console.log(server)
   return (
     <>
   
