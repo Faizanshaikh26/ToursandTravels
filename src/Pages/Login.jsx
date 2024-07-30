@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 import "../Styles/Login.css";
 import { server } from "../config";
-import toast, { Toaster } from "react-hot-toast";
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -32,6 +32,7 @@ function Login() {
         localStorage.setItem("travel-token", responsedata.token);
         window.location.replace("/");
         toast.success(`Welcome to travel, ${formData.name}!`, { id: toastId });
+        setLoading(false)
       } else {
         toast.error(responsedata.error);
       }
@@ -65,6 +66,7 @@ function Login() {
         localStorage.setItem("travel-token", responsedata.token);
         window.location.replace("/");
         toast.success(`Welcome back, ${formData.name}!`, { id: toastId });
+        setLoading(false)
       } else {
         toast.error(responsedata.error);
       }
@@ -79,10 +81,7 @@ function Login() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const toggleForm = () => {
-    setIsSignup(!isSignup);
-    setFormData({ name: "", email: "", password: "" }); // Clear form data on toggle
-  };
+  
 
   return (
     <div className="login-container">
@@ -121,9 +120,7 @@ function Login() {
             <button type="submit" disabled={loading}>
               {loading ? "Signing up..." : "Sign up"}
             </button>
-            <p onClick={toggleForm} className="toggle-form">
-              Already have an account? Login
-            </p>
+           
           </form>
         </div>
 
@@ -151,13 +148,11 @@ function Login() {
             <button type="submit" disabled={loading}>
               {loading ? "Logging in..." : "Login"}
             </button>
-            <p onClick={toggleForm} className="toggle-form">
-              Don't have an account? Sign up
-            </p>
+            
           </form>
         </div>
       </div>
-      <Toaster />
+  
     </div>
   );
 }
