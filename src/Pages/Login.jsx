@@ -27,12 +27,12 @@ function Login() {
       });
 
       const responsedata = await response.json();
+      setLoading(false);
 
       if (responsedata.success) {
         localStorage.setItem("travel-token", responsedata.token);
         window.location.replace("/");
         toast.success(`Welcome to travel, ${formData.name}!`, { id: toastId });
-        setLoading(false)
       } else {
         toast.error(responsedata.error);
       }
@@ -61,12 +61,12 @@ function Login() {
       });
 
       const responsedata = await response.json();
-
+      
+      setLoading(false);
       if (responsedata.success) {
         localStorage.setItem("travel-token", responsedata.token);
         window.location.replace("/");
         toast.success(`Welcome back, ${formData.name}!`, { id: toastId });
-        setLoading(false)
       } else {
         toast.error(responsedata.error);
       }
@@ -80,8 +80,6 @@ function Login() {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  
 
   return (
     <div className="login-container">
@@ -120,7 +118,6 @@ function Login() {
             <button type="submit" disabled={loading}>
               {loading ? "Signing up..." : "Sign up"}
             </button>
-           
           </form>
         </div>
 
@@ -148,11 +145,9 @@ function Login() {
             <button type="submit" disabled={loading}>
               {loading ? "Logging in..." : "Login"}
             </button>
-            
           </form>
         </div>
       </div>
-  
     </div>
   );
 }
