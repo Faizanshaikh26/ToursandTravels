@@ -10,12 +10,10 @@ function Login() {
     password: "",
   });
   const [loading, setLoading] = useState(false);
-  const [isSignup, setIsSignup] = useState(true); // Add state to handle form switch
 
   const handleSignup = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const toastId = toast.loading("Getting you signed up...");
 
     try {
       const response = await fetch(`${server}/signup`, {
@@ -27,12 +25,11 @@ function Login() {
       });
 
       const responsedata = await response.json();
-      setLoading(false);
 
       if (responsedata.success) {
         localStorage.setItem("travel-token", responsedata.token);
         window.location.replace("/");
-        toast.success(`Welcome to travel, ${formData.name}!`, { id: toastId });
+        toast.success(`Welcome to travel, ${formData.name}!`);
       } else {
         toast.error(responsedata.error);
       }
@@ -46,7 +43,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const toastId = toast.loading("Logging you in...");
+    
 
     try {
       const response = await fetch(`${server}/login`, {
@@ -61,12 +58,11 @@ function Login() {
       });
 
       const responsedata = await response.json();
-      
-      setLoading(false);
+
       if (responsedata.success) {
         localStorage.setItem("travel-token", responsedata.token);
         window.location.replace("/");
-        toast.success(`Welcome back, ${formData.name}!`, { id: toastId });
+        toast.success(`Welcome back, ${formData.name}!`)
       } else {
         toast.error(responsedata.error);
       }
@@ -86,7 +82,7 @@ function Login() {
       <div className="main">
         <input type="checkbox" id="chk" aria-hidden="true" />
 
-        <div className={isSignup ? "signup" : "signup hidden"}>
+        <div className="signup">
           <form onSubmit={handleSignup}>
             <label htmlFor="chk" aria-hidden="true">
               Sign up
@@ -115,13 +111,11 @@ function Login() {
               placeholder="Password"
               required
             />
-            <button type="submit" disabled={loading}>
-              {loading ? "Signing up..." : "Sign up"}
-            </button>
+            <button type="submit">Sign up</button>
           </form>
         </div>
 
-        <div className={isSignup ? "login hidden" : "login"}>
+        <div className="login">
           <form onSubmit={handleLogin}>
             <label htmlFor="chk" aria-hidden="true">
               Login
@@ -142,12 +136,11 @@ function Login() {
               placeholder="Password"
               required
             />
-            <button type="submit" disabled={loading}>
-              {loading ? "Logging in..." : "Login"}
-            </button>
+            <button disabled={loading}  type="submit">{loading ? "Loging in.." : "Login"}</button>
           </form>
         </div>
       </div>
+   
     </div>
   );
 }
