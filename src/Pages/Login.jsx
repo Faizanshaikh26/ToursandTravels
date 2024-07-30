@@ -10,11 +10,11 @@ function Login() {
     password: "",
   });
   const [loading, setLoading] = useState(false);
-  const toastId = toast.loading("getting You...");
 
   const handleSignup = async (e) => {
     e.preventDefault();
     setLoading(true);
+    const toastId = toast.loading("Getting you signed up...");
 
     try {
       const response = await fetch(`${server}/signup`, {
@@ -30,7 +30,7 @@ function Login() {
       if (responsedata.success) {
         localStorage.setItem("travel-token", responsedata.token);
         window.location.replace("/");
-        toast.success(`Welcome to travel, ${formData.name}!`,{id:toastId});
+        toast.success(`Welcome to travel, ${formData.name}!`, { id: toastId });
       } else {
         toast.error(responsedata.error);
       }
@@ -44,6 +44,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
+    const toastId = toast.loading("Logging you in...");
 
     try {
       const response = await fetch(`${server}/login`, {
@@ -62,7 +63,7 @@ function Login() {
       if (responsedata.success) {
         localStorage.setItem("travel-token", responsedata.token);
         window.location.replace("/");
-        toast.success(`Welcome back, ${formData.name}!`,{id:toastId});
+        toast.success(`Welcome back, ${formData.name}!`, { id: toastId });
       } else {
         toast.error(responsedata.error);
       }
@@ -140,6 +141,7 @@ function Login() {
           </form>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 }
