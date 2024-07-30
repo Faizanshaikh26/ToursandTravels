@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import toast from "react-hot-toast";
 import "../Styles/Login.css";
 import { server } from "../config";
+import { css } from "@emotion/react";
+import { ClipLoader } from "react-spinners";
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -9,11 +11,18 @@ function Login() {
     email: "",
     password: "",
   });
+
   const [loading, setLoading] = useState(false);
 
   const handleSignup = async (e) => {
     e.preventDefault();
     setLoading(true);
+
+    if (!formData.name || !formData.email || !formData.password) {
+      toast.error("All fields are required ");
+      setLoading(false);
+      return;
+    }
 
     try {
       const response = await fetch(`${server}/signup`, {
@@ -43,7 +52,12 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
-    
+
+    if (!formData.email || !formData.password) {
+      toast.error("All fields are required ");
+      setLoading(false);
+      return;
+    }
 
     try {
       const response = await fetch(`${server}/login`, {
@@ -62,7 +76,7 @@ function Login() {
       if (responsedata.success) {
         localStorage.setItem("travel-token", responsedata.token);
         window.location.replace("/");
-        toast.success(`Welcome back, ${formData.name}!`)
+        toast.success(`Welcome back, ${formData.name}!`);
       } else {
         toast.error(responsedata.error);
       }
@@ -93,7 +107,7 @@ function Login() {
               onChange={handleChange}
               name="email"
               placeholder="Email"
-              required
+              
             />
             <input
               type="text"
@@ -101,7 +115,7 @@ function Login() {
               onChange={handleChange}
               name="name"
               placeholder="Name"
-              required
+              
             />
             <input
               type="password"
@@ -109,9 +123,15 @@ function Login() {
               onChange={handleChange}
               name="password"
               placeholder="Password"
-              required
+              
             />
-            <button type="submit">Sign up</button>
+            <button disabled={loading} type="submit">
+              {loading ? (
+                <ClipLoader color={"#ffffff"} loading={true} css={override} size={25} />
+              ) : (
+                "Sign Up"
+              )}
+            </button>
           </form>
         </div>
 
@@ -126,7 +146,7 @@ function Login() {
               onChange={handleChange}
               name="email"
               placeholder="Email"
-              required
+              
             />
             <input
               type="password"
@@ -134,15 +154,25 @@ function Login() {
               onChange={handleChange}
               name="password"
               placeholder="Password"
-              required
+              
             />
-            <button disabled={loading}  type="submit">{loading ? "Loging in.." : "Login"}</button>
+            <button disabled={loading} type="submit">
+              {loading ? (
+                <ClipLoader color={"#ffffff"} loading={true} css={override} size={25} />
+              ) : (
+                "Login"
+              )}
+            </button>
           </form>
         </div>
       </div>
-   
     </div>
   );
 }
 
 export default Login;
+
+const override = css`
+  display: inline-block;
+  vertical-align: middle;
+`;
