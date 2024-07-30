@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px;
+    padding: 20px 60px;
     background: var(--secondary-color);
     /* background: rgb(214,232,249);
 background: linear-gradient(90deg, rgba(214,232,249,1) 0%, rgba(215,226,242,1) 50%, rgba(177,204,246,1) 100%); */
@@ -17,7 +17,19 @@ background: linear-gradient(90deg, rgba(214,232,249,1) 0%, rgba(215,226,242,1) 5
     margin-right: 35px;
     border-radius: 4px;
   }
+
+  .Header i {
+    font-size: 30px;
+    
+  }
  
+  .Header i span {
+    font-size: 11px;
+    margin: 3px;
+  
+
+   
+  }
   
   #Navbar {
     display: flex;

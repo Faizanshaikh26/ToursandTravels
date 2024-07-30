@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../Styles/Navbar.css";
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
+import toast from "react-hot-toast";
 function Navbar() {
   const [Openmenu, setOpenmenu] = useState(false);
   const Menuopen = () => {
@@ -11,7 +12,9 @@ function Navbar() {
     <>
       <div className="Header">
         <Link to="/">
-          <img src="" alt="Logo" />
+          <i className="fa-solid fa-plane-up">
+            <span>Travel</span>
+          </i>
         </Link>
         <div>
           <ul id="Navbar" className={Openmenu ? "Active-Menu" : ""}>
@@ -109,7 +112,21 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <NavLink to='/contact'><i class="fa-solid fa-message"></i></NavLink>
+              {localStorage.getItem("travel-token") ? (
+                <button
+                  onClick={() => {
+                    localStorage.removeItem("travel-token");
+                    window.location.replace("/");
+                    toast.success("Logout successfully")
+                  }}
+                >
+                  Logout
+                </button>
+              ) : (
+                <NavLink to="/login">
+                  <button>login</button>
+                </NavLink>
+              )}
             </li>
           </ul>
         </div>

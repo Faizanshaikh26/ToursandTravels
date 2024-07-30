@@ -15,10 +15,10 @@ function Footer() {
               <div className="footer-content-column">
                 <div className="footer-logo">
                   {/* Replace anchor tag with Link */}
-                  <Link className="footer-logo-link" to="/">
-                    <span className="hidden-link-text">LOGO</span>
-                    <h1>LOGO</h1>
-                  </Link>
+                   <i className="fa-solid fa-plane-up">
+            <span>Travel</span>
+          </i>
+              
                 </div>
                 <div className="footer-menu">
                   <h2 className="footer-menu-name"> Get Started</h2>
@@ -29,11 +29,11 @@ function Footer() {
                     </li>
                     <li className="menu-item menu-item-type-post_type menu-item-object-product">
                       {/* Replace anchor tag with Link */}
-                      <Link to="/documentation">Documentation</Link>
+                      <Link to="/documentation">Records</Link>
                     </li>
                     <li className="menu-item menu-item-type-post_type menu-item-object-product">
                       {/* Replace anchor tag with Link */}
-                      <Link to="/installation">Installation</Link>
+                      <Link to="/installation">Inspection</Link>
                     </li>
                   </ul>
                 </div>
@@ -149,7 +149,7 @@ function Footer() {
             <div className="footer-copyright">
               <div className="footer-copyright-wrapper">
                 <p className="footer-copyright-text">
-                  <Link className="footer-copyright-link" to="#" target="_self"> ©2024. | Created with <i className='fa-solid fa-heart' style={{color:'red'}}></i> By Faizan </Link>
+                  <Link className="footer-copyright-link" to="#" target="_self"> ©2024. || Created with <i className='fa-solid fa-heart' style={{color:'red'}}></i> By Faizan </Link>
                 </p>
               </div>
             </div>

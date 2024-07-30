@@ -1,0 +1,139 @@
+
+  
+.book-cointainer{
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+  .formbold-mb-5 {
+    margin-bottom: 15px;
+  }
+  
+  .formbold-pt-3 {
+    padding-top: 10px;
+  }
+  
+  .formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: #e0e7ff;
+    border-radius: 8px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formbold-form-label {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    margin-bottom: 10px;
+  }
+  
+  .formbold-form-label-2 {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #6a64f1;
+  }
+  
+  .formbold-form-input {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: #f7fafc;
+    font-weight: 500;
+    font-size: 14px;
+    color: #6b7280;
+    outline: none;
+    resize: none;
+    transition: all 0.3s ease;
+  }
+  
+  .formbold-form-input:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .formbold-btn {
+    text-align: center;
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 10px 20px;
+    border: none;
+    font-weight: 600;
+    background-color: #6a64f1;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .formbold-btn:hover {
+    background-color: #575bd9;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formbold--mx-3 {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  
+  .formbold-px-3 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .formbold-radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .formbold-radio-label {
+    font-weight: 500;
+    font-size: 14px;
+    color: #07074d;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .formbold-radio-label input {
+    width: auto;
+  }
+  
+  @media (min-width: 540px) {
+    .sm\:w-half {
+      width: 50%;
+    }
+  }
+  
