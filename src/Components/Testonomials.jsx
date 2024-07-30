@@ -1,8 +1,17 @@
 import React from 'react';
 import '../Styles/Testonomials.css';
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
+const isAuthenticated = localStorage.getItem("travel-token");
 
 function Testonomials() {
+  const handleContactClick = () => {
+    if (!isAuthenticated) {
+      toast.error("Please login to Contact.");
+      
+      
+    }
+  };
   return (
     <>
       <div className="testonomials" id='testnomial' data-aos="fade-right">
@@ -37,7 +46,7 @@ function Testonomials() {
             </div>
           </div>
         </div>
-        <div className="feedback">
+        <div className="feedback" onClick={handleContactClick}>
           <Link to='/contact'>
             <button className="button">Leave Us a Feedback</button>
           </Link>
